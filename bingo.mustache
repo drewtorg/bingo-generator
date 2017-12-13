@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            table {
+                width: 100%;
+            }
+
+            td {
+                border: solid black 1px;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            {{#rows}}
+            <tr>
+                {{#tiles}}
+                <td>
+                        {{#path}}
+                        <img src="{{.}}">
+                        {{/path}}
+                        {{#text}}
+                        <p>{{.}}</p>
+                        {{/text}}
+                </td>
+                {{/tiles}}
+            </tr>
+            {{/rows}}
+        </table>
+    </body>
+</html>
