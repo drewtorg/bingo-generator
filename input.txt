@@ -1,15 +1,15 @@
-pics/angel.jpg
-pics/babyjesus.jpg
-pics/candycan.jpg
-pics/christmasbells.jpg
-pics/donkey.jpg
-pics/lights.jpeg
-pics/present.jpg
-pics/stars.jpg
-pics/stocking.jpg
-pics/tree.jpg
-pics/wisemen.jpeg
-pics/wreath.jpg
+../pics/angel.jpg
+../pics/babyjesus.jpg
+../pics/candycan.jpg
+../pics/christmasbells.jpg
+../pics/donkey.jpg
+../pics/lights.jpeg
+../pics/present.jpg
+../pics/stars.jpg
+../pics/stocking.jpg
+../pics/tree.jpg
+../pics/wisemen.jpeg
+../pics/wreath.jpg
 Stars Were Gleaming
 Christmas Bells
 Samuel Tells of Baby Jesus

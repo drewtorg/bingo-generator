@@ -3,27 +3,30 @@ from random import shuffle
 
 lines = open('input.txt', 'r').readlines()
 lines = map(str.strip, lines)
-shuffle(lines)
 template = open('bingo.mustache', 'r').read().replace('\n', '')
 
-data = { 'rows': [] }
-count = 0
-for i in range(4):
-    tiles = { 'tiles': [] }
+data = { 'boards': [] }
+for i in range(2):
+    count = 0
+    shuffle(lines)
+    board = { 'rows': [] }
     for j in range(4):
-        line = lines[count]
-        is_image = False
-        extensions = ['jpg', 'jpeg', 'png']
-        for extension in extensions:
-            if extension in line:
-                is_image = True
-                break
-        if is_image:
-            tiles['tiles'].append({ 'path': line, 'text': None })
-        else:
-            tiles['tiles'].append({ 'path': None, 'text': line })
-            
-        count += 1
-    data['rows'].append(tiles)
+        row = { 'tiles': [] }
+        for k in range(4):
+            line = lines[count]
+            is_image = False
+            extensions = ['jpg', 'jpeg', 'png']
+            for extension in extensions:
+                if extension in line:
+                    is_image = True
+                    break
+            if is_image:
+                row['tiles'].append({ 'path': line, 'text': None })
+            else:
+                row['tiles'].append({ 'path': None, 'text': line })
+                
+            count += 1
+        board['rows'].append(row)
+    data['boards'].append(board)
 
 print pystache.render(template, data)
